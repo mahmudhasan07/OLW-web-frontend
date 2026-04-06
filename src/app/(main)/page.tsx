@@ -1,10 +1,14 @@
 import ServiceSection from "@/components/Service/Service";
+import Tools from "@/components/Tools/Tools";
 
 export default function Page() {
     return (
         <section>
             <div id="services">
                 <ServiceSection></ServiceSection>
+            </div>
+            <div id="tools">
+                <Tools></Tools>
             </div>
             {/* <div>
                 <Banner></Banner>
