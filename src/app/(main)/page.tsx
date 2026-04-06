@@ -1,5 +1,7 @@
 import ServiceSection from "@/components/Service/Service";
 import Tools from "@/components/Tools/Tools";
+import Started from "@/components/Started/Started";
+import FAQSection from "@/components/FAQ/FAQ";
 
 export default function Page() {
     return (
@@ -9,6 +11,12 @@ export default function Page() {
             </div>
             <div id="tools">
                 <Tools></Tools>
+            </div>
+            <div id="started">
+                <Started></Started>
+            </div>
+            <div id="faq">
+               <FAQSection></FAQSection>
             </div>
             {/* <div>
                 <Banner></Banner>
