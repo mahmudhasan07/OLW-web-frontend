@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import logo from "@/assists/Google-Logo.wine 1.png"
+import Image from "next/image";
 
 const Navbar = () => {
   const path = usePathname();
@@ -34,7 +35,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="relative">
           <Link href="/" className="text-lg relative z-50 font-bold tracking-widest">
-            <img src={logo.src} className="md:w-32 w-24" alt="" />
+            <Image src={logo} className="md:w-32 w-24" alt="" />
           </Link>
         </div>
 
@@ -62,7 +63,7 @@ const Navbar = () => {
           ))}
         </div>
         <div>
-          <Link href="/#touch" className="bg-primary text-white md:px-6 md:py-4 px-4 py-3 rounded-lg md:text-base text-sm flex items-center gap-4">Schedule A Meeting <FaArrowRight />
+          <Link href="/#touch" className="bg-primary text-white md:px-6 md:py-4 px-4 py-3 rounded-lg md:text-base text-xs flex items-center gap-4">Schedule A Meeting <FaArrowRight />
           </Link>
         </div>
 

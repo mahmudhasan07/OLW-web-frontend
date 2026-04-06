@@ -1,18 +1,11 @@
-import Banner from "@/components/banner/Banner";
-import Capabilities from "@/components/Capabilities/Capabilities";
-import ChooseNexus from "@/components/Choose Nexus/ChooseNexus";
-
-import SubBrand from "@/components/Sub-brand/SubBrand";
-import ToolingMethod from "@/components/Tool Method/ToolingMethod";
-import Work from "@/components/Work/Work";
-import FAQ from "@/components/FAQ/FAQ";
-import Touch from "@/components/Touch/Touch";
-import Footer from "@/components/Footer/Footer";
-import Build from "@/components/build/Build";
+import ServiceSection from "@/components/Service/Service";
 
 export default function Page() {
     return (
         <section>
+            <div id="services">
+                <ServiceSection></ServiceSection>
+            </div>
             {/* <div>
                 <Banner></Banner>
             </div>
