@@ -13,7 +13,7 @@ import Build from "@/components/build/Build";
 export default function Page() {
     return (
         <section>
-            <div>
+            {/* <div>
                 <Banner></Banner>
             </div>
             <div>
@@ -39,7 +39,7 @@ export default function Page() {
             </div>
             <div id="touch">
                 <Touch />
-            </div>
+            </div> */}
 
         </section>
     );

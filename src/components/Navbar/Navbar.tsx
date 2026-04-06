@@ -1,64 +1,74 @@
 "use client";
-import { useGetLogoQuery } from "@/Redux/Api/logoApi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { FaArrowRight } from "react-icons/fa6";
+import logo from "@/assists/Google-Logo.wine 1.png"
 
 const Navbar = () => {
   const path = usePathname();
+  const [activeRoute, setActiveRoute] = useState("");
   const [open, setOpen] = useState(false);
 
-  const { data: logoData, isLoading: isFetching } = useGetLogoQuery(undefined);
+  useEffect(() => {
+    setActiveRoute(`${window.location.pathname}${window.location.hash}` || "/");
+    const handleHashChange = () => {
+      setActiveRoute(`${window.location.pathname}${window.location.hash}`);
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, [path]);
 
   const routes = [
     { route: "/", name: "Home" },
-    { route: "/work", name: "Work" },
-    { route: "/#faq", name: "FAQ" },
-    { route: "/privacy-policy", name: "Privacy Policy" },
-    { route: "/terms-conditions", name: "Terms & Conditions" },
-    { route: "/about-us", name: "About Us" },
+    { route: "/#about", name: "About" },
+    { route: "/#services", name: "Services" },
+    { route: "/#pricing", name: "Pricing" },
+    { route: "/#blog", name: "Blog" },
+    { route: "/#resources", name: "Resources" },
   ];
 
   return (
     <section className=" border-b border-gray-700">
-      <div className="relative flex justify-between items-center container mx-auto px-8 py-3 text-white">
+      <div className="relative flex justify-between items-center container mx-auto px-8 py-3">
         {/* Logo */}
         <div className="relative">
           <Link href="/" className="text-lg relative z-50 font-bold tracking-widest">
-            {isFetching ? (
-              <div className="w-24 h-8 bg-gray-700 rounded animate-pulse"></div>
-            ) : logoData?.data?.image ? (
-              <img
-                src={logoData.data.image}
-                alt="Logo"
-                className="h-14 object-contain"
-              />
-            ) : (
-              "LOGO"
-            )}
+            <img src={logo.src} className="md:w-32 w-24" alt="" />
           </Link>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-5">
+        <div className="hidden lg:flex gap-5">
           {routes.map((item) => (
             <Link
               key={item.route}
               href={item.route}
-              className={`px-2 py-1 ${path === item.route ? "text-textColor font-semibold" : ""
-                } hover:bg-textColor hover:text-black rounded-md`}
+              onClick={() => setActiveRoute(item.route)}
+              className={`px-2 text-lg py-1 ${activeRoute === item.route ? "text-primary font-semibold" : ""
+                } hover:bg-primary hover:text-white rounded-md`}
             >
               {item.name}
+              {
+                activeRoute === item.route ?
+                  <div className=" w-full border border-primary">
+
+                  </div>
+                  :
+                  null
+              }
+
             </Link>
           ))}
         </div>
         <div>
-          <Link href="/#touch" className="bg-button text-black px-4 py-2 rounded-lg md:text-base text-sm">Get In Touch</Link>
+          <Link href="/#touch" className="bg-primary text-white md:px-6 md:py-4 px-4 py-3 rounded-lg md:text-base text-sm flex items-center gap-4">Schedule A Meeting <FaArrowRight />
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden z-50"
+          className="lg:hidden z-50"
           onClick={() => setOpen(true)}
         >
           ☰
@@ -73,7 +83,7 @@ const Navbar = () => {
 
         {/* Right Drawer */}
         <div
-          className={`fixed top-0 right-0 h-full w-64 bg-primary shadow-lg transform transition-transform duration-300 z-50
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50
             ${open ? "translate-x-0" : "translate-x-full"}`}
         >
           <div className="p-5 flex flex-col gap-4">
@@ -85,11 +95,22 @@ const Navbar = () => {
               <Link
                 key={item.route}
                 href={item.route}
-                onClick={() => setOpen(false)}
-                className={`px-3 py-2 rounded-lg ${path === item.route ? "text-textColor font-semibold" : ""
-                  } hover:bg-textColor hover:text-black rounded-md`}
+                onClick={() => {
+                  setOpen(false)
+                  setActiveRoute(item.route)
+                }}
+                className={`px-3 w-fit py-2 rounded-lg ${activeRoute === item.route ? "text-primary font-semibold" : ""
+                  } hover:bg-primary hover:text-black rounded-md`}
               >
                 {item.name}
+                {
+                  activeRoute === item.route ?
+                    <div className=" w-full border border-primary">
+
+                    </div>
+                    :
+                    null
+                }
               </Link>
             ))}
           </div>
