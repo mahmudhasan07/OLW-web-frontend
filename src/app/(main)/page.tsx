@@ -4,12 +4,15 @@ import Started from "@/components/Started/Started";
 import FAQSection from "@/components/FAQ/FAQ";
 import ClientReview from "@/components/ClientReview/ClientReview";
 import Question from "@/components/Question/Question";
-
+import Pricing from "@/components/Pricing/Pricing";
 export default function Page() {
     return (
         <section>
             <div id="services">
                 <ServiceSection></ServiceSection>
+            </div>
+            <div id="pricing">
+                <Pricing></Pricing>
             </div>
             <div id="tools">
                 <Tools></Tools>
