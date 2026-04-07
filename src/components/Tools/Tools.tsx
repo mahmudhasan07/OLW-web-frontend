@@ -26,7 +26,7 @@ const Tools = () => {
     <section className="w-full">
       {/* Top Section with Title and Description */}
       <div className="bg-white py-16 md:py-24">
-        <div className="container mx-auto px-4 text-center max-w-4xl">
+        <div className="mx-auto text-center max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-black">
             Our <span className="text-primary">Tools</span>
           </h2>
@@ -40,7 +40,7 @@ const Tools = () => {
 
       {/* Bottom Section with Grid */}
       <div className="bg-[#f8f9fa] py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="mx-auto px-4 max-w-5xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {toolsData.map((tool) => (
               <div

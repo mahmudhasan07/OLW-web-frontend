@@ -2,7 +2,7 @@ import ServiceSection from "@/components/Service/Service";
 import Tools from "@/components/Tools/Tools";
 import Started from "@/components/Started/Started";
 import FAQSection from "@/components/FAQ/FAQ";
-
+import ClientReview from "@/components/ClientReview/ClientReview";
 export default function Page() {
     return (
         <section>
@@ -15,6 +15,10 @@ export default function Page() {
             <div id="started">
                 <Started></Started>
             </div>
+            <div id="client-review">
+                <ClientReview></ClientReview>
+            </div>
+            
             <div id="faq">
                <FAQSection></FAQSection>
             </div>

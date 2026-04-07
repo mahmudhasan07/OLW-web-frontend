@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-
 import step1Icon from '@/assists/Group 39879.png';
 import step2Icon from '@/assists/Group 39878.png';
 import step3Icon from '@/assists/Group 39881.png';
 import step4Icon from '@/assists/Layer_1.png';
+import Reason from './Reason';
 
 
 const startSteps = [
@@ -28,7 +28,7 @@ const startSteps = [
 const Started = () => {
   return (
     <section className="w-full bg-white py-16 md:py-24">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="mx-auto px-4 max-w-4xl">
 
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-black">
@@ -76,6 +76,10 @@ const Started = () => {
             </div>
           ))}
         </div>
+
+      </div>
+      <div className=''>
+        <Reason></Reason>
       </div>
     </section>
   );

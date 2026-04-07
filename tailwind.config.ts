@@ -13,7 +13,7 @@ const config: Config = {
     extend: {
       container: {
         screens: {
-          DEFAULT: "1200px",
+          DEFAULT: "1240px",
         },
         center: true, // Optional: Center the container
         // padding: '2rem', // Optional: Add padding

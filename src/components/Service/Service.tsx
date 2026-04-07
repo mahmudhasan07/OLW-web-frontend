@@ -5,14 +5,13 @@ import { servicesData } from "./ServiceData";
 const ServiceSection = () => {
   return (
     <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-   
+      <div className="container mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold">
           Our <span className="text-primary">Service</span>
         </h2>
 
         <p className="mt-4 md:max-w-3xl max-w-full mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
 
         {/* Grid */}
