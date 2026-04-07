@@ -16,7 +16,7 @@ const config: Config = {
           DEFAULT: "1240px",
         },
         center: true, // Optional: Center the container
-        // padding: '2rem', // Optional: Add padding
+        padding: '1rem', // Optional: Add padding
       },
       colors: {
         primary: "#ED3C6A",

@@ -3,6 +3,8 @@ import Tools from "@/components/Tools/Tools";
 import Started from "@/components/Started/Started";
 import FAQSection from "@/components/FAQ/FAQ";
 import ClientReview from "@/components/ClientReview/ClientReview";
+import Question from "@/components/Question/Question";
+
 export default function Page() {
     return (
         <section>
@@ -21,6 +23,9 @@ export default function Page() {
             
             <div id="faq">
                <FAQSection></FAQSection>
+            </div>
+            <div id="question">
+                <Question></Question>
             </div>
             {/* <div>
                 <Banner></Banner>
