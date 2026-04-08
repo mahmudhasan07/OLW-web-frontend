@@ -30,7 +30,7 @@ const Navbar = () => {
   ];
 
   return (
-    <section className=" border-b border-gray-700">
+    <section className="">
       <div className="relative flex justify-between items-center container mx-auto px-8 py-3">
         {/* Logo */}
         <div className="relative">

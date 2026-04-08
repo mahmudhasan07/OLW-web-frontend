@@ -12,11 +12,8 @@ import image4 from "@/assists/Group 39909.png";
 
 const Banner = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-white min-h-[700px] md:min-h-[850px] flex items-center justify-center pt-24 md:pt-32 pb-16">
-      {/* Gradient Top */}
-      <div className="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-pink-50 to-transparent opacity-80 z-0 pointer-events-none" />
-
-      {/* Grid Pattern Background */}
+    <section className="relative w-full overflow-hidden bg-white min-h-[500px] md:min-h-[650px] flex items-center justify-center pt-24 md:pt-32 pb-16">
+      <div className="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-primary/10 to-transparent opacity-80 z-0 pointer-events-none" />
       <div 
         className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
         style={{ 
@@ -24,32 +21,22 @@ const Banner = () => {
           backgroundSize: "64px 64px" 
         }} 
       />
-
-      {/* Floating Decorative Dots */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Top Left Purple */}
         <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[20%] left-[10%] md:left-[15%] w-3 h-3 bg-indigo-500 rounded-full" />
-        {/* Top Center Green */}
         <motion.div animate={{ y: [0, 15, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[15%] left-[50%] w-3.5 h-3.5 bg-emerald-400 rounded-full" />
-        {/* Middle Left Red */}
         <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[60%] left-[15%] md:left-[20%] w-3 h-3 bg-red-400 rounded-full" />
-        {/* Middle Right Yellow */}
         <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[35%] right-[15%] md:right-[20%] w-3.5 h-3.5 bg-yellow-400 rounded-full" />
-        {/* Bottom Left Yellow */}
         <motion.div animate={{ y: [0, -12, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute bottom-[10%] left-[8%] md:left-[10%] w-2 h-2 bg-yellow-500 rounded-full" />
-        {/* Bottom Center Cyan */}
         <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute bottom-[8%] left-[55%] w-3 h-3 bg-cyan-400 rounded-full" />
-        {/* Bottom Right Dark Blue */}
         <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} className="absolute bottom-[20%] right-[10%] md:right-[15%] w-2 h-2 bg-blue-900 rounded-full" />
       </div>
 
-      {/* Floating Application Icons */}
+      
       <div className="absolute inset-0 z-0 pointer-events-none max-w-7xl mx-auto w-full h-full">
-        {/* Top Left Icon (Airbnb) */}
         <motion.div 
           animate={{ y: [0, -15, 0], rotate: [-10, -5, -10] }} 
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} 
-          className="absolute top-[18%] left-[5%] md:left-[18%] w-16 md:w-24 lg:w-28 opacity-80 md:opacity-100 drop-shadow-xl"
+          className="absolute top-[18%] left-[5%] md:left-[8%] w-16 md:w-24 lg:w-28 opacity-80 md:opacity-100 drop-shadow-xl"
         >
           <Image src={image1} alt="Airbnb" className="w-full h-auto" />
         </motion.div>
@@ -90,7 +77,7 @@ const Banner = () => {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl lg:text-[64px] font-bold text-black leading-[1.1] mb-6 tracking-tight"
         >
-          Airbnb Assistants For <br className="hidden md:block" /> Property Management
+          Airbnb Assistants For <br className="hidden md:block" /> <span className="font-normal">Property Management</span>
         </motion.h1>
         
         <motion.p 
