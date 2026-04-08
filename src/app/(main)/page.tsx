@@ -5,9 +5,13 @@ import FAQSection from "@/components/FAQ/FAQ";
 import ClientReview from "@/components/ClientReview/ClientReview";
 import Question from "@/components/Question/Question";
 import Pricing from "@/components/Pricing/Pricing";
+import TrustIndustries from "@/components/TrustIndustries/TrustIndustries";
 export default function Page() {
     return (
         <section>
+            <div id="trust-industries">
+                <TrustIndustries></TrustIndustries>
+            </div>
             <div id="services">
                 <ServiceSection></ServiceSection>
             </div>

@@ -16,7 +16,6 @@ const FAQSection = () => {
     <section className="my-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         
-        {/* Heading */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
@@ -29,7 +28,6 @@ const FAQSection = () => {
           </h2>
         </motion.div>
 
-        {/* FAQ Items */}
         <div className="flex flex-col gap-4">
           {faqsData.map((faq, index) => (
             <motion.div
