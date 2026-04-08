@@ -43,10 +43,9 @@ const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 font-sans">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full container bg-white py-16 md:py-24 font-sans">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header Section */}
         <div className="text-center mb-16 relative">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Airnbn Assistent <span className="text-primary">pricing</span>
@@ -54,8 +53,7 @@ const Pricing = () => {
           <p className="text-gray-600 text-sm md:text-base font-medium mb-10">
             Choose a plan that&apos;s right for you
           </p>
-          
-          {/* Toggle Switch */}
+
           <div className="flex items-center justify-center max-w-fit mx-auto relative mt-2 mb-12">
             <span className={`transition-colors text-sm md:text-base font-semibold mr-4 ${!isYearly ? 'text-gray-900' : 'text-gray-400'}`}>Pay Monthly</span>
             
@@ -71,7 +69,6 @@ const Pricing = () => {
             
             <span className={`transition-colors text-sm md:text-base font-semibold ml-4 ${isYearly ? 'text-gray-900' : 'text-gray-400'}`}>Pay Yearly</span>
             
-            {/* Image Arrow for "Save 25%" */}
             <div className="absolute left-full top-1/2 -translate-y-[40%] ml-2 md:ml-2 hidden md:flex items-center">
               <Image src={arrowImage} alt="Arrow" className="w-[90px] object-contain flex-shrink-0 -mr-2" />
               <span className="text-primary font-medium ml-3 whitespace-nowrap pt-7">Save 25%</span>
@@ -79,8 +76,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-center max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-center mx-auto">
           {pricingPlans.map((plan, index) => {
             const active = plan.isPopular;
             return (
@@ -88,7 +84,7 @@ const Pricing = () => {
                 key={index}
                 className={`rounded-2xl transition-all duration-300 w-full flex flex-col p-8 sm:p-10
                   ${active 
-                    ? 'bg-primary text-white md:scale-105 shadow-2xl py-12 md:py-14 border border-primary z-10' 
+                    ? 'bg-primary text-white shadow-2xl  border border-primary z-10' 
                     : 'bg-white text-gray-900 border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]'
                   }
                 `}

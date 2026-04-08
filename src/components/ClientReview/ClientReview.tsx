@@ -2,6 +2,9 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 
 const reviews = [
   {
@@ -9,21 +12,30 @@ const reviews = [
     name: "Jenny Wilson",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "https://i.pravatar.cc/150?img=5",
-    active: false,
   },
   {
     id: 2,
     name: "Esther Howard",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "https://i.pravatar.cc/150?img=11",
-    active: true,
   },
   {
     id: 3,
     name: "Robert Fox",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "https://i.pravatar.cc/150?img=8",
-    active: false,
+  },
+  {
+    id: 4,
+    name: "Jane Doe",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "https://i.pravatar.cc/150?img=1",
+  },
+  {
+    id: 5,
+    name: "John Smith",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "https://i.pravatar.cc/150?img=3",
   }
 ];
 
@@ -40,46 +52,71 @@ const ClientReview = () => {
       </div>
 
       {/* Cards Container */}
-      <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
-        {/* We use flex with start alignment on mobile, center on desktop */}
-        <div className="flex items-center justify-start xl:justify-center gap-6 overflow-x-auto pb-10 pt-4 snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:px-4">
-          {reviews.map((review) => (
-            <div
-              key={review.id}
-              className={`flex-none snap-center flex items-center p-6 md:p-8 rounded-2xl w-[320px] sm:w-[380px] md:w-[460px] lg:w-[480px] transition-all duration-300
-                ${
-                  review.active
-                    ? "bg-white shadow-[0_15px_60px_-15px_rgba(0,0,0,0.1)] scale-100 z-10"
-                    : "bg-[#F8F9FA] opacity-80 md:opacity-100 scale-95 md:scale-95 z-0"
-                }
-              `}
-            >
-              <div className="flex-shrink-0 mr-4 md:mr-6">
-                <Image
-                  src={review.image}
-                  alt={review.name}
-                  width={64}
-                  height={64}
-                  className="w-16 h-16 md:w-24 md:h-24 rounded-full object-cover drop-shadow-sm"
-                />
-              </div>
+      <div className="w-full mx-auto">
+        <div className="md:px-4">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+            }}
+            className="pb-16 pt-8 px-4 sm:px-6"
+          >
+            {reviews.map((review) => (
+              <SwiperSlide key={review.id} className="h-auto">
+                {({ isActive }) => (
+                  <div
+                    className={`flex items-center p-6 md:p-8 rounded-2xl transition-all duration-300 h-full
+                      ${isActive
+                        ? "bg-white shadow-[0_15px_60px_-15px_rgba(0,0,0,0.1)] scale-100 z-10"
+                        : "bg-[#F8F9FA] opacity-70 md:opacity-80 scale-90 md:scale-95 z-0"
+                      }
+                    `}
+                  >
+                    <div className="flex-shrink-0 mr-4 md:mr-6">
+                      <Image
+                        src={review.image}
+                        alt={review.name}
+                        width={64}
+                        height={64}
+                        className="w-16 h-16 md:w-24 md:h-24 rounded-full object-cover drop-shadow-sm"
+                      />
+                    </div>
 
-              {/* Review Content */}
-              <div className="flex flex-col text-left">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1.5 md:mb-2">{review.name}</h3>
-                <p className="text-xs md:text-[13px] lg:text-sm text-gray-600 mb-3 md:mb-4 leading-relaxed line-clamp-3">
-                  {review.text}
-                </p>
-                <div className="flex items-center gap-1 text-[#FFB627]">
-                  <FaStar size={14} />
-                  <FaStar size={14} />
-                  <FaStar size={14} />
-                  <FaStar size={14} />
-                  <FaStar size={14} className="text-gray-300" />
-                </div>
-              </div>
-            </div>
-          ))}
+                    {/* Review Content */}
+                    <div className="flex flex-col text-left">
+                      <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1.5 md:mb-2">{review.name}</h3>
+                      <p className="text-xs md:text-[13px] lg:text-sm text-gray-600 mb-3 md:mb-4 leading-relaxed line-clamp-3">
+                        {review.text}
+                      </p>
+                      <div className="flex items-center gap-1 text-[#FFB627]">
+                        <FaStar size={14} />
+                        <FaStar size={14} />
+                        <FaStar size={14} />
+                        <FaStar size={14} />
+                        <FaStar size={14} className="text-gray-300" />
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiPlus } from "react-icons/fi";
+import { FiPlus, FiMinus } from "react-icons/fi";
 import { faqsData } from "./FAQData";
 
 const FAQSection = () => {
@@ -49,11 +49,11 @@ const FAQSection = () => {
                 </span>
 
                 <motion.span
-                  animate={{ rotate: openIndex === index ? 45 : 0 }}
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                   className="text-2xl text-primary border rounded-full p-1 border-primary ml-4"
                 >
-                  <FiPlus />
+                  {openIndex === index ? <FiMinus /> : <FiPlus />}
                 </motion.span>
               </button>
 
