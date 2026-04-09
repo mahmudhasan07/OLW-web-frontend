@@ -21,7 +21,7 @@ const ServiceSection = () => {
             return (
               <div
                 key={service.id}
-                className="group bg-white rounded-xl p-10 text-left shadow-sm border border-gray-100 hover:border-pink-400 hover:shadow-md transition-all duration-300"
+                className="hover:bg-white rounded-xl p-10 text-left shadow-sm border hover:scale-105 hover:shadow-[0_0_30px_rgba(215, 205, 207, 0.47)] hover:border-gray-100 border-primary/20  transition-all duration-300"
               >
                 {/* Icon */}
                 <div className="mb-4">

@@ -43,8 +43,8 @@ const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <section className="w-full container bg-white py-14 md:py-16">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full container py-14 md:py-16">
+      <div className="">
         
         <div className="text-center mb-16 relative">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -76,7 +76,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-center mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-8 items-center mx-auto">
           {pricingPlans.map((plan, index) => {
             const active = plan.isPopular;
             return (

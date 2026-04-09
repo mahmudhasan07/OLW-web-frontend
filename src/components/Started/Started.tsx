@@ -27,7 +27,7 @@ const startSteps = [
 
 const Started = () => {
   return (
-    <section className="w-full bg-white py-14 md:py-16">
+    <section className="w-full container py-14 md:py-16">
       <div className="mx-auto px-4 max-w-5xl">
 
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
@@ -49,7 +49,7 @@ const Started = () => {
                   {step.id}
                 </div>
 
-                <div className="border border-pink-100 rounded-xl bg-white flex flex-col items-center justify-center h-48 sm:h-56 w-full relative z-0">
+                <div className="border border-pink-100 rounded-xl bg-white flex flex-col items-center justify-center h-48 lg:h-56 w-full relative z-0">
                   <Image
                     src={step.icon}
                     alt={`Step ${step.id} icon`}

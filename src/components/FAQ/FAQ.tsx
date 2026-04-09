@@ -14,7 +14,7 @@ const FAQSection = () => {
 
   return (
     <section className="py-14 md:py-16">
-      <div className="container bg-[#F9FAFB] mx-auto p-16 rounded-2xl md:rounded-3xl">
+      <div className="container bg-[#F6F6F6] mx-auto py-16 rounded-2xl md:rounded-3xl">
         
         <motion.div
           className="text-center mb-12"
@@ -28,7 +28,7 @@ const FAQSection = () => {
           </h2>
         </motion.div>
 
-        <div className="flex flex-col gap-4 max-w-5xl mx-auto">
+        <div className="flex flex-col gap-3  max-w-5xl mx-auto">
           {faqsData.map((faq, index) => (
             <motion.div
               key={faq.id}

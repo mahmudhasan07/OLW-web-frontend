@@ -41,7 +41,7 @@ const reviews = [
 
 const ClientReview = () => {
   return (
-    <section className="w-full bg-white py-14 md:py-16 overflow-hidden">
+    <section className="w-full py-14 md:py-16 overflow-hidden">
       <div className="mx-auto px-4 text-center mb-12 md:mb-20">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
           Check Our Clients <span className="text-[#FF4A7A]">Review</span>
@@ -53,7 +53,7 @@ const ClientReview = () => {
 
       {/* Cards Container */}
       <div className="w-full mx-auto">
-        <div className="md:px-4">
+        <div className="">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}
@@ -78,13 +78,13 @@ const ClientReview = () => {
             className="pb-16 pt-8 px-4 sm:px-6"
           >
             {reviews.map((review) => (
-              <SwiperSlide key={review.id} className="h-auto">
+              <SwiperSlide key={review.id} className="py-10">
                 {({ isActive }) => (
                   <div
-                    className={`flex items-center p-6 md:p-8 rounded-2xl transition-all duration-300 h-full
+                    className={`flex items-center p-6 md:p-8 rounded-2xl
                       ${isActive
-                        ? "bg-white shadow-[0_15px_60px_-15px_rgba(0,0,0,0.1)] scale-100 z-10"
-                        : "bg-[#F8F9FA] opacity-70 md:opacity-80 scale-90 md:scale-95 z-0"
+                        ? "bg-white shadow-xl shadow-[0px_0px_30px_rgba(136, 136, 136, 0.41)] scale-105"
+                        : "bg-[#F6F6F6] opacity-70 md:opacity-80 scale-75 md:scale-95"
                       }
                     `}
                   >

@@ -25,12 +25,12 @@ const Tools = () => {
   return (
     <section className="w-full py-14 md:py-16">
       {/* Top Section with Title and Description */}
-      <div className="bg-white">
+      <div className="container">
         <div className="mx-auto text-center max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-black">
             Our <span className="text-primary">Tools</span>
           </h2>
-          <p className="text-gray-800 text-sm md:text-base leading-relaxed md:px-12 font-medium">
+          <p className="text-gray-800 mb-5 text-sm md:text-base leading-relaxed md:px-12 font-medium">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
@@ -39,9 +39,9 @@ const Tools = () => {
       </div>
 
       {/* Bottom Section with Grid */}
-      <div className="bg-[#f8f9fa] pt-10 md:pt-12 pb-16 md:pb-24">
-        <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+      <div className="bg-[#F6F6F6] pt-10 md:pt-12 pb-16 md:pb-24">
+        <div className="mx-auto max-w-5xl container">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
               {toolsData.map((tool) => (
                 <div
                 key={tool.id}

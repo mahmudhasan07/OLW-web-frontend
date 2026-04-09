@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const Question = () => {
   return (
-    <section className="w-full px-4 py-14 md:py-16 bg-white">
-      <div className="max-w-[1240px] mx-auto bg-[#F8F9FA] rounded-2xl md:rounded-3xl p-8 md:p-12 text-center flex flex-col items-center">
+    <section className="w-full px-4 py-14 md:py-16 ">
+      <div className="max-w-[1240px] mx-auto bg-[#F6F6F6] rounded-2xl md:rounded-3xl p-8 md:p-12 text-center flex flex-col items-center">
         
         {/* Avatars */}
         <div className="flex items-center justify-center -space-x-3 md:-space-x-4 mb-6">
