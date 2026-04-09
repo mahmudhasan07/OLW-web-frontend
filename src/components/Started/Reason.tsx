@@ -17,7 +17,7 @@ const Reason = () => {
       <div className="bg-[#FDEBF0] rounded-[3rem] w-full flex flex-col lg:flex-row items-center justify-between p-8 md:p-12 lg:p-20 relative overflow-hidden">
         
         <div className="lg:w-1/2 flex flex-col items-start z-10 w-full mb-12 lg:mb-0">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
             Few Reasons Why you
             <br className="hidden lg:block" /> Choose us?
           </h2>

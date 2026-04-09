@@ -45,7 +45,7 @@ const Pricing = () => {
   return (
     <section className="w-full container py-14 md:py-16">
       <div className="">
-        
+
         <div className="text-center mb-16 relative">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Airnbn Assistent <span className="text-primary">pricing</span>
@@ -56,19 +56,19 @@ const Pricing = () => {
 
           <div className="flex items-center justify-center max-w-fit mx-auto relative mt-2 mb-12">
             <span className={`transition-colors text-sm md:text-base font-semibold mr-4 ${!isYearly ? 'text-gray-900' : 'text-gray-400'}`}>Pay Monthly</span>
-            
-            <button 
+
+            <button
               className={`relative inline-flex h-7 w-14 items-center rounded-full transition-colors focus:outline-none ${isYearly ? 'bg-primary' : 'bg-gray-300'}`}
               onClick={() => setIsYearly(!isYearly)}
               aria-label="Toggle pricing period"
             >
-              <span 
+              <span
                 className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform shadow-sm ${isYearly ? 'translate-x-[26px]' : 'translate-x-[4px]'}`}
               />
             </button>
-            
+
             <span className={`transition-colors text-sm md:text-base font-semibold ml-4 ${isYearly ? 'text-gray-900' : 'text-gray-400'}`}>Pay Yearly</span>
-            
+
             <div className="absolute left-full top-1/2 -translate-y-[40%] ml-2 md:ml-2 hidden md:flex items-center">
               <Image src={arrowImage} alt="Arrow" className="w-[90px] object-contain flex-shrink-0 -mr-2" />
               <span className="text-primary font-medium ml-3 whitespace-nowrap pt-7">Save 25%</span>
@@ -80,11 +80,11 @@ const Pricing = () => {
           {pricingPlans.map((plan, index) => {
             const active = plan.isPopular;
             return (
-              <div 
+              <div
                 key={index}
-                className={`rounded-2xl transition-all duration-300 w-full flex flex-col p-8 sm:p-10
-                  ${active 
-                    ? 'bg-primary text-white shadow-2xl  border border-primary z-10' 
+                className={`rounded-2xl transition-all duration-300 w-full flex flex-col p-8 sm:p-10 hover:scale-105 
+                  ${active
+                    ? 'bg-primary text-white shadow-2xl  border border-primary z-10'
                     : 'bg-white text-gray-900 border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]'
                   }
                 `}
@@ -93,7 +93,7 @@ const Pricing = () => {
                 <p className={`text-sm mb-6 min-h-[40px] leading-relaxed ${active ? 'text-white/90' : 'text-gray-500'}`}>
                   {plan.desc}
                 </p>
-                
+
                 <div className="flex items-end gap-1 mb-8">
                   <span className={`text-4xl md:text-5xl font-bold tracking-tight ${active ? 'text-white' : 'text-gray-900'}`}>
                     ${isYearly ? plan.price * 12 * 0.75 : plan.price}
@@ -101,10 +101,10 @@ const Pricing = () => {
                   <span className={`text-sm mb-2 font-medium ${active ? 'text-white/80' : 'text-gray-500'}`}>/ Month</span>
                 </div>
 
-                <button 
+                <button
                   className={`w-full py-3 px-6 rounded-md font-semibold transition-colors duration-300 mb-10
-                    ${active 
-                      ? 'bg-white text-primary hover:bg-gray-50' 
+                    ${active
+                      ? 'bg-white text-primary hover:bg-gray-50'
                       : 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-white'
                     }
                   `}
@@ -117,10 +117,10 @@ const Pricing = () => {
                     const hasFeature = plan.features[fIdx];
                     return (
                       <li key={fIdx} className="flex items-center gap-4">
-                        <div 
+                        <div
                           className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 transition-colors
-                            ${hasFeature 
-                              ? (active ? 'bg-white' : 'bg-pink-100') 
+                            ${hasFeature
+                              ? (active ? 'bg-white' : 'bg-pink-100')
                               : (active ? 'bg-white' : 'bg-transparent')
                             }
                           `}
@@ -131,10 +131,10 @@ const Pricing = () => {
                             <FaTimes className={`text-[12px] ${active ? 'text-primary' : 'text-gray-300'}`} />
                           )}
                         </div>
-                        <span 
+                        <span
                           className={`text-sm font-medium leading-tight
-                            ${hasFeature 
-                              ? (active ? 'text-white' : 'text-gray-800') 
+                            ${hasFeature
+                              ? (active ? 'text-white' : 'text-gray-800')
                               : (active ? 'text-white' : 'text-gray-400')
                             }
                           `}
@@ -145,7 +145,7 @@ const Pricing = () => {
                     );
                   })}
                 </ul>
-                
+
               </div>
             );
           })}

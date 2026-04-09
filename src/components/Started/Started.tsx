@@ -43,7 +43,7 @@ const Started = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12 mt-12 pl-4 pr-4 sm:pl-8 sm:pr-8 md:px-0">
           {startSteps.map((step) => (
-            <div key={step.id} className="flex flex-col items-center">
+            <div key={step.id} className="rounded-md flex flex-col items-center hover:scale-105 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.10)]">
               <div className="relative w-full max-w-[320px] md:max-w-none">
                 <div className="absolute -top-6 -left-6 md:-top-8 md:-left-8 w-14 h-14 md:w-16 md:h-16 rounded-full border-[3px] border-primary bg-white flex items-center justify-center text-xl md:text-2xl font-semibold text-black shadow-sm z-10">
                   {step.id}
@@ -68,7 +68,7 @@ const Started = () => {
                 </div>
               </div>
 
-              <div className="mt-8 text-center text-black">
+              <div className="my-5  text-center text-black">
                 <p className="font-semibold text-base md:text-lg whitespace-pre-line leading-snug">
                   {step.title}
                 </p>
