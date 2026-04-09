@@ -41,7 +41,7 @@ const reviews = [
 
 const ClientReview = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-24 overflow-hidden border">
+    <section className="w-full bg-white py-14 md:py-16 overflow-hidden">
       <div className="mx-auto px-4 text-center mb-12 md:mb-20">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
           Check Our Clients <span className="text-[#FF4A7A]">Review</span>

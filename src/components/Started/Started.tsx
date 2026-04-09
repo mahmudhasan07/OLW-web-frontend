@@ -27,8 +27,8 @@ const startSteps = [
 
 const Started = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-24">
-      <div className="mx-auto px-4 max-w-4xl">
+    <section className="w-full bg-white py-14 md:py-16">
+      <div className="mx-auto px-4 max-w-5xl">
 
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-black">

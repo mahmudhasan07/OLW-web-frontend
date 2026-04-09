@@ -4,7 +4,7 @@ import { servicesData } from "./ServiceData";
 
 const ServiceSection = () => {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-14 md:py-16">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold">
           Our <span className="text-primary">Service</span>

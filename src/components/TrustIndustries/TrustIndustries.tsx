@@ -14,9 +14,9 @@ const marqueeItems = [...brands, ...brands, ...brands, ...brands];
 
 const TrustIndustries = () => {
     return (
-        <section className=" overflow-hidden w-full py-16 md:py-24">
+        <section className=" overflow-hidden w-full py-14 md:py-16">
             <h3 className="text-center text-lg md:text-xl font-bold mb-8">Trusted by leaders in 50+ industries</h3>
-            <div className="bg-[#F8F9FA] py-6 md:py-8 relative flex overflow-x-hidden w-full group">
+            <div className="bg-[#F8F9FA] pt-6 md:pt-8 relative flex overflow-x-hidden w-full group">
                 <div className="flex w-max animate-marquee whitespace-nowrap items-center">
                     {marqueeItems.map((brand, index) => (
                         <div key={index} className="flex-shrink-0 px-8 md:px-14 flex items-center justify-center">

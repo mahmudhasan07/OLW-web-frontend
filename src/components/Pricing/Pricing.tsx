@@ -43,7 +43,7 @@ const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <section className="w-full container bg-white py-16 md:py-24 font-sans">
+    <section className="w-full container bg-white py-14 md:py-16">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16 relative">

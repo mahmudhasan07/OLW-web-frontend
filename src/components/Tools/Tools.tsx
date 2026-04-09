@@ -23,9 +23,9 @@ const toolsData = [
 
 const Tools = () => {
   return (
-    <section className="w-full">
+    <section className="w-full py-14 md:py-16">
       {/* Top Section with Title and Description */}
-      <div className="bg-white py-16 md:py-24">
+      <div className="bg-white">
         <div className="mx-auto text-center max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-black">
             Our <span className="text-primary">Tools</span>
@@ -39,13 +39,13 @@ const Tools = () => {
       </div>
 
       {/* Bottom Section with Grid */}
-      <div className="bg-[#f8f9fa] py-16 md:py-24">
-        <div className="mx-auto px-4 max-w-5xl">
+      <div className="bg-[#f8f9fa] pt-10 md:pt-12 pb-16 md:pb-24">
+        <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {toolsData.map((tool) => (
-              <div
+              {toolsData.map((tool) => (
+                <div
                 key={tool.id}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center p-8 h-32 md:h-40"
+                className="bg-white rounded-xl shadow-sm hover:scale-105 transition-all hover:shadow-[0_0_30px_rgba(255,100,100,0.25)] duration-300 flex items-center justify-center p-8 h-32 md:h-40"
               >
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image

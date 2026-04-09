@@ -30,8 +30,8 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="">
-      <div className="relative flex justify-between items-center container mx-auto px-8 py-3">
+    <section className="container">
+      <div className="relative flex justify-between items-center  mx-auto py-3">
         {/* Logo */}
         <div className="relative">
           <Link href="/" className="text-lg relative z-50 font-bold tracking-widest">
@@ -63,7 +63,7 @@ const Navbar = () => {
           ))}
         </div>
         <div>
-          <Link href="/#touch" className="bg-primary text-white md:px-6 md:py-4 px-4 py-3 rounded-lg md:text-base text-xs flex items-center gap-4">Schedule A Meeting <FaArrowRight />
+          <Link href="" className="bg-primary text-white md:px-6 md:py-4 px-4 py-3 rounded-lg md:text-[14px] text-xs flex items-center gap-4">Schedule A Meeting <FaArrowRight />
           </Link>
         </div>
 
